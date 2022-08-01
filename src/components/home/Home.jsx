@@ -63,7 +63,7 @@ const Section = styled.section`
 
 const LayOut = styled.div`
   display: grid;
-  grid-template-columns: 1.25fr 3.5fr 1.25fr;
+  grid-template-columns: 2fr 4fr 2fr;
   gap: 25px;
   margin: 25px 0;
 
