@@ -40,6 +40,30 @@ const HeaderNav = () => {
             <span>Notifications</span>
           </a>
         </NavList>
+
+        <User>
+          <a>
+            <img src="/images/user.svg" alt="" />
+            <span>
+              Me
+              <img src="/images/down-icon.svg" alt="" />
+            </span>
+          </a>
+
+          <SignOut>
+            <a>Sign Out</a>
+          </SignOut>
+        </User>
+
+        <Work>
+          <a>
+            <img src="/images/nav-work.svg" alt="" />
+            <span>
+              Work
+              <img src="/images/down-icon.svg" alt="" />
+            </span>
+          </a>
+        </Work>
       </NavListWrap>
     </Nav>
   );
@@ -113,4 +137,41 @@ const NavList = styled.li`
       }
     }
   }
+`;
+
+const SignOut = styled.div`
+  position: absolute;
+  top: 50px;
+  background-color: white;
+  border-radius: 0 0 5px 5px;
+  width: 80px;
+  height: 40px;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+  display: none;
+`;
+
+const User = styled(NavList)`
+  img {
+    width: 24px;
+    border-radius: 50%;
+    height: 24px;
+  }
+  span {
+    display: flex;
+    align-items: center;
+  }
+
+  &:hover {
+    ${SignOut} {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+  }
+`;
+
+const Work = styled(User)`
+  border-left: 1px solid rgba(0, 0, 0, 0.18);
 `;
