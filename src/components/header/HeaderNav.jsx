@@ -150,6 +150,11 @@ const SignOut = styled.div`
   transition: all 0.2s ease-in-out;
   text-align: center;
   display: none;
+
+  @media screen and (max-width: 768px) {
+    top: -40px;
+    width: 70px;
+  }
 `;
 
 const User = styled(NavList)`
