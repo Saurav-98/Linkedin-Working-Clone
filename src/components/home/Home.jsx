@@ -14,6 +14,12 @@ const Home = () => {
           moving.
         </p>
       </Section>
+
+      <LayOut>
+        <div>Left Side</div>
+        <div>Main</div>
+        <div>Right Side</div>
+      </LayOut>
     </Container>
   );
 };
@@ -47,6 +53,19 @@ const Section = styled.section`
   }
 
   @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding: 0 5px;
+  }
+`;
+
+const LayOut = styled.div`
+  display: grid;
+  grid-template-columns: 1.25fr 3.5fr 1.25fr;
+  gap: 25px;
+  margin: 25px 0;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
     flex-direction: column;
     padding: 0 5px;
   }
