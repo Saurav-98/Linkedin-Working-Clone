@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Article from './Article';
 
 const Main = () => {
   return (
@@ -35,6 +36,8 @@ const Main = () => {
           </button>
         </div>
       </ShareBox>
+
+      <Article />
     </Container>
   );
 };
